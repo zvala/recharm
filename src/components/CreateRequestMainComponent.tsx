@@ -28,16 +28,7 @@ export function CreateRequestMainComponent(
 
   // Function to validate URL format using a regex
   const validateUrl = (url: string) => {
-    const urlPattern = new RegExp(
-      "^(https?:\\/\\/)?" + // Protocol (optional)
-      "((([a-zA-Z\\d]([a-zA-Z\\d-]*[a-zA-Z\\d])*)\\.)+[a-zA-Z]{2,}|" + // Domain name
-      "localhost|" + // Or localhost
-      "\\d{1,3}(\\.\\d{1,3}){3})" + // ...or IPv4 address
-      "(\\:\\d+)?(\\/[-a-zA-Z\\d%_.~+]*)*" + // Port and path (optional)
-      "(\\?[;&a-zA-Z\\d%_.~+=-]*)?" + // Query string (optional)
-      "(\\#[-a-zA-Z\\d_]*)?$", // Fragment (optional)
-      "i"
-    );
+    const urlPattern = new RegExp("^https?:\/\/");
     return urlPattern.test(url);
   };
 
