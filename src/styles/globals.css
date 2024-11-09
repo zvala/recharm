@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#__next {
+    height: 100%;
+}
+
+/* Required to allow click event on icons inside a Input field group */
+[data-testid="right-icon"] {
+    pointer-events: unset;
+ }
